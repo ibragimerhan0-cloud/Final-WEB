@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/placeholder.svg" type="image/svg+xml">
+    <title>Profile - Aura Coffee Roasters</title>
+    <script src="js/theme.js"></script>
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="vendor/jquery/jquery.min.js" defer></script>
+    <script src="js/forms.js" defer></script>
+    <script src="js/account.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="scroll-progress" aria-hidden="true"><div id="scroll-progress-bar"></div></div>
+    <div id="aura-toast" class="aura-toast" role="status" aria-live="polite"></div>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand me-auto me-lg-3" href="index.html">Aura Coffee</a>
+            <div class="form-check form-switch aura-theme-switch align-items-center d-flex gap-2 mb-0 me-3 me-lg-0 order-lg-last">
+                <input class="form-check-input mt-0" id="theme-toggle" type="checkbox" role="switch">
+                <label class="form-check-label" for="theme-toggle">Dark mode</label>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end me-lg-4" id="navbarNav">
+                <ul class="navbar-nav gap-lg-2 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4 my-lg-5">
+        <section class="account-layout bg-white rounded shadow-sm" aria-labelledby="account-title">
+            <img class="account-photo" src="images/gallery-beans.jpg" alt="Roasted coffee beans">
+            <div class="account-panel p-4 p-lg-5">
+                <h1 id="account-title">Your Aura profile</h1>
+                <p class="text-muted mb-4">View the details you saved when you created your account.</p>
+                <div id="profile-guest" hidden>
+                    <p>Log in to view your account details.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-primary" href="login.html">Log in</a>
+                        <a class="btn btn-outline-secondary" href="signup.html">Create an account</a>
+                    </div>
+                </div>
+                <div id="profile-account" hidden>
+                    <dl class="account-details mb-4">
+                        <div><dt>Name</dt><dd id="profile-name"></dd></div>
+                        <div><dt>Email</dt><dd id="profile-email"></dd></div>
+                        <div><dt>Phone</dt><dd id="profile-phone"></dd></div>
+                    </dl>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-primary" href="menu.html">Explore the menu</a>
+                        <button class="btn btn-outline-secondary" id="logout-button" type="button">Log out</button>
+                    </div>
+                </div>
+                <p id="profile-feedback" class="aura-feedback mt-3 mb-0" role="status"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 mt-auto">
+        <div class="container-fluid">
+            <p class="mb-0">&copy; 2026 Aura Coffee Roasters. Team Members: Shalabay Madi, Ibragim Yerkhan | Group: SE-2510</p>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

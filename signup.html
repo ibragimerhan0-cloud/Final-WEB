@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/placeholder.svg" type="image/svg+xml">
+    <title>Sign Up - Aura Coffee Roasters</title>
+    <script src="js/theme.js"></script>
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="vendor/jquery/jquery.min.js" defer></script>
+    <script src="js/forms.js" defer></script>
+    <script src="js/account.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="scroll-progress" aria-hidden="true"><div id="scroll-progress-bar"></div></div>
+    <div id="aura-toast" class="aura-toast" role="status" aria-live="polite"></div>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand me-auto me-lg-3" href="index.html">Aura Coffee</a>
+            <div class="form-check form-switch aura-theme-switch align-items-center d-flex gap-2 mb-0 me-3 me-lg-0 order-lg-last">
+                <input class="form-check-input mt-0" id="theme-toggle" type="checkbox" role="switch">
+                <label class="form-check-label" for="theme-toggle">Dark mode</label>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end me-lg-4" id="navbarNav">
+                <ul class="navbar-nav gap-lg-2 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="signup.html">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4 my-lg-5">
+        <section class="account-layout bg-white rounded shadow-sm" aria-labelledby="account-title">
+            <img class="account-photo" src="images/gallery-barista.jpg" alt="Barista preparing espresso">
+            <div class="account-panel p-4 p-lg-5">
+                <h1 id="account-title">Create your Aura account</h1>
+                <p class="text-muted mb-4">Set up a demo profile using sample details and a password made for this project.</p>
+                <form id="signup-form" novalidate>
+                    <div class="mb-3">
+                        <label for="account-name" class="form-label">Full name</label>
+                        <input class="form-control" id="account-name" name="name" type="text" autocomplete="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="account-email" class="form-label">Email address</label>
+                        <input class="form-control" id="account-email" name="email" type="text" inputmode="email" autocomplete="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="account-phone" class="form-label">Phone number</label>
+                        <input class="form-control" id="account-phone" name="phone" type="tel" autocomplete="tel"
+                            placeholder="+7 701 123 4567" aria-describedby="phone-help">
+                        <p id="phone-help" class="form-text mb-0">Use 10 to 15 digits. Spaces and an initial + are allowed.</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="account-password" class="form-label">Password</label>
+                        <input class="form-control" id="account-password" name="password" type="password" autocomplete="new-password" aria-describedby="password-help">
+                        <p id="password-help" class="form-text mb-0">Use at least 8 characters with an uppercase letter, a lowercase letter, and a number.</p>
+                    </div>
+                    <p id="signup-feedback" class="aura-feedback" role="status"></p>
+                    <button class="btn btn-primary" type="submit">Create account</button>
+                </form>
+                <p class="small mt-4 mb-0">Already signed up? <a class="text-decoration-underline" href="login.html">Log in</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 mt-auto">
+        <div class="container-fluid">
+            <p class="mb-0">&copy; 2026 Aura Coffee Roasters. Team Members: Shalabay Madi, Ibragim Yerkhan | Group: SE-2510</p>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
